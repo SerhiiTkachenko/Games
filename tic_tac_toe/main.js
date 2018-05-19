@@ -44,3 +44,44 @@ window.onload = function () {
 //0 1 2
 //3 4 5
 //6 7 8
+// window.onload = function () {
+// var t = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+// var game =  document.getElementById('game');
+// for (var i = 0; i < 9; i++) {
+//      game.innerHTML += '<div class = "block"></div>';
+//  }     
+// var allblock = document.getElementsByClassName('block');
+// for(i = 0; i < allblock.length; i++) {
+//     allblock[i].index = i;
+//     allblock[i].addEventListener('click', function(event) {
+//     allblock[event.target.index].innerHTML = 'X';
+//     delete t[(t.indexOf(event.target.index))];
+//     function compareRandom(a, b) {
+//     return Math.random() - 0.5;
+//     }
+//     t.sort(compareRandom);
+//     allblock[t[0]].innerHTML = 'O';
+//     checkWin();
+//     t.shift();     
+//     });      
+// }
+// function checkWin() {
+//     var winningCombinations = [
+//         [0, 1, 2],
+//         [3, 4, 5],
+//         [6, 7, 8],
+//         [0, 3, 6],
+//         [1, 4, 7],
+//         [2, 5, 8],
+//         [0, 4, 8],
+//         [2, 4, 6]   
+//     ];    
+//     for (var j = 0; j < winningCombinations.length; j++) {
+//         var wc = winningCombinations[j];
+//         if (allblock[wc[0]].innerHTML == allblock[wc[1]].innerHTML && allblock[wc[1]].innerHTML == allblock[wc[2]].innerHTML && allblock[wc[0]].innerHTML != '') {
+//             alert( 'WON!');
+//         }
+//     }
+// } 
+// }
+ 
