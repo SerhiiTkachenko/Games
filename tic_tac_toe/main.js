@@ -15,6 +15,12 @@ window.onload = function () {
                 event.target.innerHTML = '0';                
             }
             count++;
+            checkWin();
         }
+    }
+
+    function checkWin() {
+        var allBlock = document.getElementsByClassName('block');
+        
     }
 }
