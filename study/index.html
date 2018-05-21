@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style media="screen">
+        table th {
+            font-size: 19px;
+            background-color: rgb(28, 176, 176);
+        }
+        table td {
+            text-align: center;
+            background-color: rgba(85, 171, 0, 0.4);
+        }
+    </style>
 </head>
 <body>
-    
+    <table border="1" width = "500px">
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+        </tr>
+        <tr>
+            <td colspan="2">1</td>
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
 </body>
 </html>
