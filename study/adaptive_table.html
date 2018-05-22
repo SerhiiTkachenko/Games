@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        .wrapper {
+            width: 95%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .table_style {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table_style td,
+        .table_style th {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        .table_style td {
+            position: relative;
+        }
+        @media screen and (max-width: 1050px) {
+            thead {
+                display: none;
+            }
+            .table_style td {
+                display: block;
+                padding-left: 40%;
+                border: none;
+            }
+            .table_style td:nth-child(odd) {
+                background-color: lightgrey;
+            }
+            .table_style td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 2%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .table_style td::before {
+                position: static;
+                display: block;
+                background-color: lightgrey;
+                font-weight: bold;
+                padding-left: 10px;
+
+            }
+            .table_style td {
+                padding-left: 10px;
+                text-align: center;
+            }
+            .table_style td li{
+                padding-left: 10px;
+                text-align: left;
+                text-decoration: none;
+            }
+
+            .table_style td:nth-child(odd) {
+                background-color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="table_wrapper">
+            <table class="table_style">
+                <thead>
+                    <tr>
+                        <th>Something 1</th>
+                        <th>Something 2</th>
+                        <th>Something 3</th>
+                        <th>Something 4</th>
+                        <th>Something 5</th>
+                        <th>Something 6</th>
+                        <th>Something 7</th>
+                        <th>Something 8</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Something 1"><span>Anything 9</span></td>
+                        <td data-label="Something 2"><span>Anything 10</span></td>
+                        <td data-label="Something 3"><span>Anything 11</span></td>
+                        <td data-label="Something 4">
+                            <ul>
+                                <li><a href="#">Desc 1</a></li>
+                                <li><a href="#">Desc 2</a></li>
+                                <li><a href="#">Desc 3</a></li>
+                            </ul>
+                        </td>
+                        <td data-label="Something 5"><span>Anything 13</span></td>
+                        <td data-label="Something 6"><span>Anything 14</span></td>
+                        <td data-label="Something 7"><span>Anything 15</span></td>
+                        <td data-label="Something 8"><span>Anything 16</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Something 1"><span>Anything 9</span></td>
+                        <td data-label="Something 2"><span>Anything 10</span></td>
+                        <td data-label="Something 3"><span>Anything 11</span></td>
+                        <td data-label="Something 4">
+                            <ul>
+                                <li><a href="#">Desc 1</a></li>
+                                <li><a href="#">Desc 2</a></li>
+                                <li><a href="#">Desc 3</a></li>
+                            </ul>
+                        </td>
+                        <td data-label="Something 5"><span>Anything 13</span></td>
+                        <td data-label="Something 6"><span>Anything 14</span></td>
+                        <td data-label="Something 7"><span>Anything 15</span></td>
+                        <td data-label="Something 8"><span>Anything 16</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Something 1"><span>Anything 9</span></td>
+                        <td data-label="Something 2"><span>Anything 10</span></td>
+                        <td data-label="Something 3"><span>Anything 11</span></td>
+                        <td data-label="Something 4">
+                            <ul>
+                                <li><a href="#">Desc 1</a></li>
+                                <li><a href="#">Desc 2</a></li>
+                                <li><a href="#">Desc 3</a></li>
+                            </ul>
+                        </td>
+                        <td data-label="Something 5"><span>Anything 13</span></td>
+                        <td data-label="Something 6"><span>Anything 14</span></td>
+                        <td data-label="Something 7"><span>Anything 15</span></td>
+                        <td data-label="Something 8"><span>Anything 16</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
