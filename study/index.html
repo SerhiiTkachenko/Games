@@ -32,7 +32,24 @@
         }
 
         caption {
+            margin-top: 12px;
+            font-size: 20px;
             caption-side: bottom;
+            color: blue;
+        }
+        .visited_row {
+            text-align: center;
+            background-color: tomato;
+        }
+        .enter_row {
+            text-align: center;
+            background-color: lightcyan;
+        }
+        th:hover {
+            background-color: grey;
+        }
+        th:hover::first-letter {
+            color: red;
         }
     </style>
 </head>
@@ -42,29 +59,27 @@
         <caption>Посещения по городам</caption>
         <tr>
             <th>Город</th>
-            <th>Посещения</th>
+            <th class="active_row">Посещения</th>
             <th>Страниц</th>
             <th>Время</th>
         </tr>
         <tr>
             <td>СПб</td>
-            <td>199</td>
+            <td class="visited_row" rowspan="3">199</td>
             <td>18,02</td>
             <td>00:13:45</td>
         </tr>
         <tr>
             <td>Москва</td>
-            <td>69</td>
             <td rowspan="2">нет данных</td>
             <td>00:00:44</td>
         </tr>
         <tr>
             <td>Киев</td>
-            <td>5</td>
             <td>00:18:07</td>
         </tr>
         <tr>
-            <td colspan="3">Всего посещений</td>
+            <td class="enter_row" colspan="3">Всего посещений</td>
             <td>273</td>
         </tr>
     </table>
